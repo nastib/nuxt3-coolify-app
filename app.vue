@@ -3,7 +3,7 @@
     <NuxtRouteAnnouncer />
     <div>Hello World</div>
     <div>
-      <iframe :src="iframeUrl" frameborder="0" width="1600" height="1600" allowtransparency></iframe>
+      <iframe :src="iframeUrl" frameborder="0" width="1665" height="1600" allowtransparency></iframe>
     </div>
     <!-- <NuxtWelcome /> -->
   </div>
@@ -24,5 +24,7 @@ const payload = {
 };
 const token = jwt.sign(payload, METABASE_SECRET_KEY);
 
-const iframeUrl = METABASE_SITE_URL + '/embed/dashboard/' + token + '#theme=night&#bordered=true&titled=true';
+//const iframeUrl = METABASE_SITE_URL + '/embed/dashboard/' + token + '#theme=night&#bordered=true&titled=true';
+
+const iframeUrl = METABASE_SITE_URL + '/embed/dashboard/' + token + '#bordered=true&titled=true';
 </script>
